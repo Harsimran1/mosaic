@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="js/workers-manager.js"></script>
+    <script type="text/javascript" src="js/canvas-helper.js"></script>
+    <script type="text/javascript" src="js/mosaic.js"></script>
+    <script type="text/javascript" src="js/client.js"></script>
+    <title>Mosaic</title>
+  </head>
+  <style>
+    body div:first-child{
+      line-height: 50px;
+      background: #99c432;
+      padding: 0 20px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+  </style>
+  <body>
+
+  <div>
+    <input id="input" type="file" accept="image/*">
+  </div>
+  <div>
+    <canvas id="mosaic"></canvas>
+  </div>
+
+
+
+  </body>
+  <script>
+    (function(app) {
+      document.addEventListener('DOMContentLoaded', function() {
+        app.run();
+
+      });
+    })(window.app || (window.app = {}));
+  </script>
+</html>
