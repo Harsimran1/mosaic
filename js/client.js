@@ -3,9 +3,6 @@
 
 'use strict';
 
-/** @fileoverview */
-
-
 (function(window, document, app) {
 
   app.run = function run() {
@@ -25,7 +22,6 @@
   function handleFileUpload(callback) {
     var img = new Image();
     img.src = window.URL.createObjectURL(this);
-    // img.crossOrigin = 'anonymous';
     img.onload = function() { callback(this); }
   };
 
